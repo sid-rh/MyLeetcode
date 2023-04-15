@@ -1,3 +1,8 @@
+/*
+    Approach: find the sum of n natural numbers using the formula.
+    find the difference between the sum of the array and that of n natural numbers.
+*/
+
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
