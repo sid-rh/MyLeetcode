@@ -1,3 +1,6 @@
+/*
+    Approach: border surrounded by water is counted as perimeter
+*/
 #include <iostream>
 #include <bits/stdc++.h>
 
@@ -15,18 +18,22 @@ int islandPerimeter(vector<vector<int>> &grid)
         {
             if (grid[i][j] == 1)
             {
+                // left border
                 if (j == 0 || (j != 0 && grid[i][j - 1] == 0))
                 {
                     perimeter++;
                 }
+                // top border
                 if (i == 0 || (i != 0 && grid[i - 1][j] == 0))
                 {
                     perimeter++;
                 }
+                // right border
                 if (j == col - 1 || (j != col - 1 && grid[i][j + 1] == 0))
                 {
                     perimeter++;
                 }
+                // bottom border
                 if (i == row - 1 || (i != row - 1 && grid[i + 1][j] == 0))
                 {
                     perimeter++;
