@@ -3,6 +3,10 @@
 
 using namespace std;
 
+/*
+sort the arrays
+iterate through cookies and child array, if child is satisfied by the size increase the answer counter and go to the next iteration. Else, go to the next cookie.
+*/
 int findContentChildren(vector<int> &g, vector<int> &s)
 {
     int count = 0;

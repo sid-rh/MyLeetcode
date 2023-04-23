@@ -1,8 +1,12 @@
+
+
 #include <iostream>
 #include <bits/stdc++.h>
 
 using namespace std;
-
+/*
+    Start from the back and count till counter becomes 2(reached third max number), also record the number in a var to check for duplicates.
+*/
 int thirdMax(vector<int> &nums)
 {
     sort(nums.begin(), nums.end());

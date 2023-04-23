@@ -3,6 +3,9 @@
 
 using namespace std;
 
+/*
+Approach: find the end time and set current duration by default to duration; if the end time overlaps with next attack(end>=next attack time) then find the difference between end and next attack time and reduce current duration by the difference .finally add the answer to the vector.
+*/
 int findPoisonedDuration(vector<int> &timeSeries, int duration)
 {
     int ans = 0;

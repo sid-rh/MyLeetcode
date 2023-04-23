@@ -1,3 +1,7 @@
+/*
+    Two pointers, find the intersection and push it in the answer.
+*/
+
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
@@ -24,6 +28,29 @@ vector<int> intersection(vector<int> &nums1, vector<int> &nums2)
             j++;
         else
             i++;
+    }
+    return ans;
+}
+
+/*
+    Record the frequency of each element in the first array using a map, iterate through the second and check if the frequency is not 0. If it is not 0, then insert it in the answer and reduce the frequency.
+*/
+
+vector<int> intersect(vector<int> &nums1, vector<int> &nums2)
+{
+    unordered_map<int, int> freq;
+    vector<int> ans;
+    for (auto i : nums1)
+    {
+        freq[i]++;
+    }
+    for (auto j : nums2)
+    {
+        if (freq[j])
+        {
+            freq[j]--;
+            ans.push_back(j);
+        }
     }
     return ans;
 }

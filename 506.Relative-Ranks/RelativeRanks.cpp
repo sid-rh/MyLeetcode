@@ -2,6 +2,10 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+
+/*
+    sort the scores. Assign rank. if rank is 1 the gold ,2=silver,3=bronze
+*/
 vector<string> findRelativeRanks(vector<int> &score)
 {
     unordered_map<int, int> mp;

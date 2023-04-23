@@ -2,7 +2,9 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
+/*
+    for each element in nums 1, find the same element in second array. if the number is not found then answer is -1. If next is greater than current then push the answer and break out else if iterator reaches the end then push -1 if not , increment pointer .
+*/
 vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
 {
     vector<int> ans;
@@ -31,6 +33,10 @@ vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
     }
     return ans;
 }
+
+/*
+     Store nge of each number in a map.
+*/
 
 int main()
 {

@@ -3,6 +3,10 @@
 
 using namespace std;
 
+/*
+Store each row in a map, for each letter store the row number in a map. if the row is mismatched, break out of the loop. Use a flag.
+*/
+
 vector<string> findWords(vector<string> &words)
 {
     unordered_map<int, string> umap;

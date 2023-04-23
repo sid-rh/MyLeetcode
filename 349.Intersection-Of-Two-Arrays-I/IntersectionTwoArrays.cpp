@@ -1,3 +1,7 @@
+/*
+    Approach: sort the arrays, two pointers, if numbers are equal insert it into the answer(only if it does not exist in the array) else next iteration.
+*/
+
 #include <iostream>
 #include <bits/stdc++.h>
 
@@ -25,6 +29,23 @@ vector<int> intersection(vector<int> &nums1, vector<int> &nums2)
             j++;
         else
             i++;
+    }
+    return ans;
+}
+/*
+Approach: Use set(all unique elements) to store first array, then iterate through second array and find the intersection. Insert in the ans if found and remove the element from the set.
+*/
+vector<int> intersection2(vector<int> &nums1, vector<int> &nums2)
+{
+    unordered_set<int> st(nums1.begin(), nums1.end());
+    vector<int> ans;
+    for (auto i : nums2)
+    {
+        if (st.count(i))
+        {
+            ans.push_back(i);
+            st.erase(i);
+        }
     }
     return ans;
 }

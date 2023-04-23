@@ -25,6 +25,23 @@ vector<int> findDisappearedNumbers(vector<int> &nums)
     return ans;
 }
 
+/*
+    Add it to a set instead
+*/
+vector<int> findDisappearedNumbers2(vector<int> &nums)
+{
+    int n = nums.size();
+    unordered_set<int> set(nums.begin(), nums.end());
+    vector<int> ans;
+
+    for (int i = 1; i <= n; i++)
+    {
+        if (set.count(i) == 0)
+            ans.push_back(i);
+    }
+    return ans;
+}
+
 int main()
 {
     int n;

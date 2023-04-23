@@ -3,6 +3,9 @@
 
 using namespace std;
 
+/*
+    count consecutive ones, once another number is encountered check if the number is greater than maximum number if yes then assign count to max and reset the counter.
+*/
 int findMaxConsecutiveOnes(vector<int> &nums)
 {
     int maxNum = 0;
