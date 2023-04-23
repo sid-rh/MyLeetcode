@@ -1,5 +1,5 @@
 /*
-    Approach: start from the back and find the first zero, swap it with non zeroes until the end;
+    Approach: take two pointers, one will iterate through the array and the other one will move with it if the current number is non zero, else it will not. If the second pointer has a zero vaule, then swap.
 */
 
 #include <iostream>
@@ -9,19 +9,22 @@ using namespace std;
 
 void moveZeroes(vector<int> &nums)
 {
-    int n = nums.size();
-
-    for (int i = n - 1; i >= 0; i--)
+    int i = 0;
+    int j = 0;
+    while (i < nums.size())
     {
-        if (nums[i] == 0)
+        if (nums[i] != 0)
         {
-            int j = i;
-            while (j < n - 1)
+            if (nums[j] == 0)
             {
-                if (nums[j + 1] != 0)
-                    swap(nums[j], nums[j + 1]);
-                j++;
+                swap(nums[i], nums[j]);
             }
+            j++;
+            i++;
+        }
+        else
+        {
+            i++;
         }
     }
 }
