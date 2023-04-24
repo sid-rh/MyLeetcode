@@ -35,7 +35,7 @@ int main()
     cout << "Enter the needle: ";
     cin >> needle;
 
-    bool ans = strStr(haystack, needle);
+    int ans = strStr(haystack, needle);
 
     cout << ans << endl;
 }
