@@ -3,6 +3,10 @@
 
 using namespace std;
 
+/*
+    Approach: start from the back, cases are: both 1 and carry 1->ans is 1 and carry remains 1; both 1 carry 0 ans is 0 and carry 0 carry 1 and any one of a or b 0 ans is 0 carry remains 1
+*/
+
 string addBinary(string a, string b)
 {
     string ans = "";
