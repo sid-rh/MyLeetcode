@@ -50,12 +50,12 @@ int main()
     string pattern = "";
     string b = "";
 
-    // cout << "Enter the pattern: ";
-    // cin >> pattern;
-    // cout << "Enter the b: ";
-    // cin >> b;
+    cout << "Enter the pattern: ";
+    cin >> pattern;
+    cout << "Enter the b: ";
+    cin >> b;
 
-    bool ans = wordPattern("abba", "a b b a");
+    bool ans = wordPattern(pattern, b);
 
     cout << "ans is " << ans << endl;
 }
